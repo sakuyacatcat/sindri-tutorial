@@ -1,0 +1,17 @@
+{
+  "name": "circuit",
+  "version": "1.0.0",
+  "description": "The Circom circuit circuit.",
+  "scripts": {
+    "auth": "sindri login",
+    "config:check": "sindri config list",
+    "lint": "sindri lint",
+    "deploy": "sindri deploy"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  },
+  "devDependencies": {
+    "sindri": "0.0.1-alpha.28"
+  }
+}
