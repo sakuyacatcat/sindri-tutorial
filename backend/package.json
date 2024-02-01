@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start:sdk": "node dist/sdk/sindri-sdk.js",
     "clean": "rimraf dist"
   },
   "keywords": [],

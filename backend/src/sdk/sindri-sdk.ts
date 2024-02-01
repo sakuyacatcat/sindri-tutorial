@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { writeFileSync } from "fs";
 import { dirname, join } from "path";
 import sindri from "sindri";
 import { fileURLToPath } from "url";
@@ -12,7 +13,19 @@ async function main() {
     process.env.SINDRI_CIRCUIT_ID || "",
     '{"X":1,"Y":1}'
   );
-  console.log(proof);
+  const outDir = join(dirName, "../../out");
+  writeFileSync(
+    join(outDir, "verification_key.json"),
+    JSON.stringify(proof.verification_key)
+  );
+  writeFileSync(
+    join(outDir, "proof.json"),
+    JSON.stringify(proof.proof, null, 2)
+  );
+  writeFileSync(
+    join(outDir, "public.json"),
+    JSON.stringify(proof.public, null, 2)
+  );
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
