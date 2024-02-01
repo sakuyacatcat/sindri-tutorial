@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start:proof": "node dist/sdk/sindri-sdk.js",
+    "start:proof": "node dist/script/proof-from-circuit.js",
     "start:verify": "node dist/script/verify.js",
     "clean": "rimraf dist"
   },
