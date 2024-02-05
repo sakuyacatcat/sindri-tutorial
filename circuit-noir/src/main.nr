@@ -1,3 +1,3 @@
-fn main(input: u8) -> pub bool {
-    input >= 20
+fn main(input: u8) {
+    assert(input >= 20);
 }
